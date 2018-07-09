@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import argparse
 import subprocess
 
@@ -23,7 +25,7 @@ def filter_lcov(lines, verbose=False):
             lineno = line[3:].split(',')[0]
             if lineno in defs:
                 if verbose:
-                    print(f'Ignoring: {srcfile}:{lineno}:{defs[lineno]}')
+                    printf('Ignoring: {srcfile}:{lineno}:{defs[lineno]}')
                 continue
         yield line
 
